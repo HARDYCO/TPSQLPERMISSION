@@ -1,0 +1,9 @@
+CREATE USER 'invite'@'localhost' IDENTIFIED BY 'test';
+GRANT SELECT ON message.* TO invite
+
+CREATE USER 'administrateur'@'localhost' IDENTIFIED BY 'test';
+GRANT ALL PRIVILEGES ON tp.* TO administrateur
+
+CREATE VIEW vue_commentaires AS
+SELECT message, nom
+FROM message;
